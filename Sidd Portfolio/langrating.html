@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+   <style>body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+}
+
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.content {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1.5em;
+}
+
+/* Add some interesting background effects */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    background: url('assets\img\IMG_20211215_214039.jpg'); /* Add your background pattern image */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 0, 150, 0.2), rgba(0, 204, 255, 0.2));
+    z-index: -1;
+}
+
+body::after {
+    content: 'assets\img\IMG_20211215_214039.jpg';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets\img\IMG_20211215_214039.jpg'); /* Add your background pattern image */
+    opacity: 0.05;
+    z-index: -2;
+}
+</style>
+</head>
+<body>
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+    <div class="content">
+        <header>
+            <h1>Welcome to My Portfolio</h1>
+        </header>
+        <main>
+            <p>This is the front page of my portfolio. More content coming soon!</p>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
